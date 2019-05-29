@@ -10,17 +10,22 @@ import db from './db/db';
 
 const app = express();
 
-// app.get('/api/v1/todos', (req, res) => {
-//     res.status(200).send({
-//         success: 'true',
-//         message: 'todos retrieved successfully',
-//         todos: db
-//     })
-// });
-
 app.get('/', (req, res) => {
-    res.send('Hello Word!')
+    res.send('What\'s up?')
 })
+
+app.get('/api/v1/todos', (req, res) => {
+    res.status(200).send({
+        success: 'true',
+        message: 'todos retrieved successfully',
+        todos: db
+    })
+});
+
+// First Test
+// app.get('/', (req, res) => {
+//     res.send('Hello Word!')
+// })
 
 const PORT = 3000;
 
