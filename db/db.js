@@ -11,4 +11,5 @@ const todos = [
     }
 ];
 
-//export default todos;
+export default todos;
+// default export todos;
